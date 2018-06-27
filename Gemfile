@@ -8,4 +8,6 @@ gem 'sinatra-activerecord'
 group :development, :test do
   gem 'shotgun'
   gem 'tux'
+  gem 'rspec'
+  gem 'database_cleaner'
 end
