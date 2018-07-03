@@ -11,18 +11,19 @@
 </head>
 <body>
   <h1>Songs</h1>
-  <% songs.each do |song| %>
   <section class="grid-container">
-  <ul>
+  <% songs.each do |song| %>
     <div class="grid-item">
+  <ul>
+    <li><img src="vinyl-record-icon.jpg" alt="image placeholder"/></li>
     <li><%= song.title %></li>
     <li><%= song.length %></li>
     <li><%= song.play_count %></li>
     <% if song.playlist %>
     <li><%= song.playlist.name %></li>
     <% end %>
-    </div>
   </ul>
+    </div>
   <% end %>
   </section>
   
