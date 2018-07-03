@@ -1,7 +1,31 @@
-<% @songs.each do |song| %>
-<ul>
-  <li><%= song.title %></li>
-  <li><%= song.length %></li>
-  <li><%= song.play_count %></li>
-</ul>
-<% end %>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Muli|Shrikhand" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>Songs</h1>
+  <% songs.each do |song| %>
+  <section class="grid-container">
+  <ul>
+    <div class="grid-item">
+    <li><%= song.title %></li>
+    <li><%= song.length %></li>
+    <li><%= song.play_count %></li>
+    <% if song.playlist %>
+    <li><%= song.playlist.name %></li>
+    <% end %>
+    </div>
+  </ul>
+  <% end %>
+  </section>
+  
+</body>
+</html>
+
